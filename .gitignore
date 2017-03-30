@@ -2,3 +2,4 @@ vendor/
 bootstrap/
 storage/
 .env 
+nbproject/
