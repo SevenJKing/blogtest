@@ -20,8 +20,7 @@ $factory->define(App\Model\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Model\Posts::class, function (Faker\Generator  $faker) {
-	dump('Postsfaker');
+$factory->define(App\Model\Posts::class, function (Faker\Generator  $faker) { 
     return [
         'title' => $faker->sentence(mt_rand(3,10)),
         'subject' => join('\n\n',$faker->paragraphs(mt_rand(3,6))),

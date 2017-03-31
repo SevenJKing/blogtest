@@ -10,8 +10,7 @@ class PostsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run(){
-        dump('truncate');
+    public function run(){ 
         App\Model\Posts::truncate();
 
         factory(App\Model\Posts::class,10)->create();
