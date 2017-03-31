@@ -10,9 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+require(__DIR__.'/routes/admin_routes.php');
+require(__DIR__.'/routes/blog_routes.php');  
 
-Route::get('/', function () {
-    return redirect('/blog');
-});
-Route::get('/blog', 'BlogController@index');
-Route::get('/blog/{slug}', 'BlogController@showPost');
+Route::get('/','BaseController@index');
