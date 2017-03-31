@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+require(__DIR__.'/routes/auth_routes.php');  
 require(__DIR__.'/routes/admin_routes.php');
 require(__DIR__.'/routes/blog_routes.php');  
 
