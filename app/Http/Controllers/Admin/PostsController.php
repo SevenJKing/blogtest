@@ -7,8 +7,9 @@ use Illuminate\Support\Facades\Redirect;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
-class BlogController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +18,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        dd('welcome admin');
+       return view('admin.posts.index');
     }
 
     /**

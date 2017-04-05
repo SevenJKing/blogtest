@@ -14,7 +14,7 @@ class CreateThreadsTable extends Migration
     {
         Schema::create('threads', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('uid');// 是否含有附件
+            $table->integer('uid')->references('id')->on('users');// 是否含有附件
             $table->string('title');
             $table->string('author')->default('');
             $table->text('content')->default('');

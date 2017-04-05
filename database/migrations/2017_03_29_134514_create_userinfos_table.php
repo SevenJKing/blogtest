@@ -13,7 +13,7 @@ class CreateUserinfosTable extends Migration
     public function up()
     {
         Schema::create('userinfos', function (Blueprint $table) {
-            $table->increments('uid')->unique();
+            $table->increments('uid')->unique()->references('id')->on('users');
             $table->string('nickname')->unique();
             $table->string('address')->unique();
             $table->timestamps();

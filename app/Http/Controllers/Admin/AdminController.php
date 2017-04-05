@@ -16,8 +16,7 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        dd('welcome');
-        return Redirect::to("/admin/blog"); 
+    { 
+        return Redirect::to("/admin/posts"); 
     }
 }

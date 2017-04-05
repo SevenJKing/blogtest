@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-Route::group(['namespace' => 'Admin','prefix'=>'admin'],function(){ 
+Route::group(['namespace' => 'Admin','prefix'=>'admin', 'middleware' => 'auth'],function(){
     route::get('/','AdminController@index'); 
-    route::get('/blog','BlogController@index'); 
+    resource('/posts','PostsController'); 
 });

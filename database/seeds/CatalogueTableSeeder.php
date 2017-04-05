@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
  
-class UsersTableSeeder extends Seeder
+class CataloguesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,9 +11,8 @@ class UsersTableSeeder extends Seeder
      * @return void
      */
     public function run(){ 
-      
-        App\Model\Users::truncate();
+        App\Model\Catalogues::truncate();
 
-        factory(App\Model\Users::class)->create();
+        factory(App\Model\Catalogues::class)->create();
     }
 } 
