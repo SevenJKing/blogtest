@@ -15,3 +15,4 @@ require(__DIR__.'/routes/admin_routes.php');
 require(__DIR__.'/routes/blog_routes.php');  
 
 Route::get('/','BaseController@index');
+Route::any('/setlang/{lang}','BaseController@setlang');

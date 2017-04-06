@@ -8,4 +8,9 @@
 Route::group(['namespace' => 'Admin','prefix'=>'admin', 'middleware' => 'auth'],function(){
     route::get('/','AdminController@index'); 
     resource('/posts','PostsController'); 
-});
+    resource('/catalogues','CataloguesController'); 
+    resource('/tags','TagsController'); 
+    resource('/attachs','AttachsController'); 
+}); 
+
+ route::get('/',['middleware' => 'auth'],'AdminController@index'); 

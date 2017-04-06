@@ -12,8 +12,12 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
+    'username'=>'User Name',
+    'password'=>'Password',
+    'rememberme'=>'Remember Me',
+    'login'=>'Login',
     'failed' => 'These credentials do not match our records.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+    'badpassword' => 'Incorrect username or password.',
+    
 ];

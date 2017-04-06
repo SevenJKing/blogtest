@@ -8,6 +8,6 @@
  
 Route::group(['namespace' => 'Auth','prefix'=>'auth'],function(){ 
     route::get('/login','AuthController@login'); 
-    route::get('/loginout','AuthController@loginout'); 
+    route::get('/logout','AuthController@getlogout'); 
     route::post('/login','AuthController@auth'); 
 });
