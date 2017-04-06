@@ -29,8 +29,8 @@ class LangMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ($request->has('lang')) {
-            $lang=$request->lang; 
+        if (empty(session('localLang'))||$request->has('lang')) {
+            $lang=$request->has('lang')?$request->lang:'zh'; 
             Session::put('localLang',$lang);  
         }
         return $next($request);

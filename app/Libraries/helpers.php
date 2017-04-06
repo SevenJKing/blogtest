@@ -8,5 +8,6 @@
             $trans= ucwords(preg_replace('/([0-9a-zA-z-_ ]*[.])*/', '', $code));  
          } 
          return $trans;
+//         return app('App\Services\Bulder')->getlang($code,$lang,$params);
      }
  }
