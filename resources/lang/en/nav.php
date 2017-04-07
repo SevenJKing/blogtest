@@ -7,4 +7,6 @@ return [
     'users'=>'Users',
     'logout'=>'Logout',
     'login'=>'Login',  
+    'zh'=>'Chinese',  
+    'en'=>'English',  
 ];

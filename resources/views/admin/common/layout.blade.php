@@ -7,16 +7,6 @@
         <script src="{{url('/resource/js/jquery.min.js')}}"></script>  
         <script src="{{url('/resource/js/common.js')}}"></script>  
         <script src="{{url('/resource/js/bootstrap.min.js')}}"></script>  
-        <script>
-            $(function(){
-                $('.langswitch').on('click',function(){
-                    var lang= $(this).val();
-                    if(lang){
-                        $.get( "{{url('/setlang')}}"+"/"+lang);
-                    }
-                })
-            })
-        </script>
     </head>
     <body>  
         <div class="right"> 
