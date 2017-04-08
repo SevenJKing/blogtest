@@ -3,20 +3,27 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Repositories\TagsRepository;
 
-class TagsController extends Controller
-{
+class TagsController extends Controller {
+
+    protected $tagsrep;
+
+    function __construct(TagsRepository $tagsrep) {
+        $this->tagsrep = $tagsrep;
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('admin.tags.index');
+    public function index() {
+
+        $tags =$this->tagsrep->getall();
+        return view('admin.tags.index')->withTags($tags);
     }
 
     /**
@@ -24,8 +31,7 @@ class TagsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -35,8 +41,7 @@ class TagsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -46,8 +51,7 @@ class TagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -57,8 +61,7 @@ class TagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         //
     }
 
@@ -69,8 +72,7 @@ class TagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -80,8 +82,8 @@ class TagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
+
 }
