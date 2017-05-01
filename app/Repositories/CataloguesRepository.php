@@ -15,9 +15,20 @@ class CataloguesRepository {
     function __construct(Catalogues $catalogues){
         $this->catalogues=$catalogues;
     }
-    function getall(){
-        $data=$this->catalogues->paginate($this->prepage);
-        return $data;
+    function getAllCatalogues($page=true){
+        $data=$this->catalogues;
+        return $page?$data->paginate($this->prepage):$data->get();
+    }
+    function getCatalogues($page=true){
+        $data=$this->catalogues;
+        $data=$data->where('pid',0);
+        return $page?$data->paginate($this->prepage):$data->get();
+    }
+    function getSubCatalogues($id,$page=true){
+        $id=  intval($id);
+        $data=$this->catalogues;
+        $data=$data->where('pid',$id);
+        return $page?$data->paginate($this->prepage):$data->get();
     }
     function createCatalogue($input){
         $catalog=new $this->catalogues;

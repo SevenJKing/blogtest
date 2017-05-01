@@ -11,6 +11,8 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin', 'middleware' => 'auth'],
     resource('/catalogues','CataloguesController'); 
     resource('/tags','TagsController'); 
     resource('/attachs','AttachsController'); 
+    
+    route::get('subcatalogs/{id}','CataloguesController@showSubCatalogs');
 }); 
 
  route::get('/',['middleware' => 'auth'],'AdminController@index'); 
